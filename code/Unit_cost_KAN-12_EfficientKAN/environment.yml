@@ -1,0 +1,21 @@
+name: kan-multidismantler-cpu
+channels:
+  - pytorch
+  - pyg
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch=2.4.0
+  - torchvision=0.19.0
+  - torchaudio=2.4.0
+  - cpuonly
+  - numpy=1.26.4
+  - scipy
+  - matplotlib
+  - networkx
+  - pandas
+  - pip
+  - pip:
+      - torch-scatter -f https://data.pyg.org/whl/torch-2.4.0+cpu.html
+      - torch-sparse -f https://data.pyg.org/whl/torch-2.4.0+cpu.html
+      - git+https://github.com/Blealtan/efficient-kan.git --no-deps
